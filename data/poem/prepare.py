@@ -3,8 +3,8 @@ import tiktoken
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('data/poem/sher.csv')
-data = df['poem'].str.cat(sep='\n')
+df = pd.read_csv('data/poem/khayyam.txt')
+data = df['body'].str.cat(sep='\n')
 
 n = len(data)
 train_data = data[:int(n*0.9)]
